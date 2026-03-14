@@ -1,0 +1,1 @@
+# browser-text-pattern-extractor
