@@ -8,9 +8,9 @@ Using this for extracting some text under a certain pattern from videos, without
 
 ## Requirements
 
-- Windows OS
-- [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/)
-- NVIDIA GPU (optional)
+- Windows OS.
+- [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://www.anaconda.com/).
+- NVIDIA GPU (optional).
 - Note: Some functionality may not work such as the alarm on non-Windows and GPU on non-NVIDIA cards.
 
 ---
@@ -46,6 +46,7 @@ pip install easyocr
 > ```bash
 > pip install torch torchvision --index-url https://download.pytorch.org/whl/cu130 --force-reinstall
 > ```
+> ⚠️ The `--force-reinstall` flag is required — it ensures existing PyTorch packages are replaced with the correct CUDA-enabled build.
 >
 > Verify GPU is detected:
 > ```bash
@@ -113,7 +114,7 @@ The output will then show only `19` instead of `Age: 19`.
 The program works by repeatedly screenshotting the browser at a set interval. The scan interval defines how many seconds to wait between screenshots.
 
 > **Note:** EasyOCR processing takes additional time, so the actual interval will be:
-> `scan interval + EasyOCR processing time`
+> `scan interval + EasyOCR processing time`.
 >
 > For example, a 1 second interval may effectively run every 1.5–2 seconds depending on your hardware.
 
@@ -125,9 +126,9 @@ The program works by repeatedly screenshotting the browser at a set interval. Th
 The alarm alerts you when matching text is found. The alarm interval controls the duration of the alarm sound.
 
 **Behaviour:**
-- When a match is found, the alarm plays for the full alarm interval duration
-- Any new matches found during the alarm will **not** extend or restart it
-- Once the alarm finishes, if matches are still being found, the alarm will trigger again
+- When a match is found, the alarm plays for the full alarm interval duration.
+- Any new matches found during the alarm will **not** extend or restart it.
+- Once the alarm finishes, if matches are still being found, the alarm will trigger again.
 
 ![alarm feature showcase](assets/readme/alarm-feature.png)
 
